@@ -5,7 +5,7 @@
 |----------|------------------|--------------------------------------|----------------------|----------------------------|------------------------------|------------------------------|------------------------------|
 | UM       | ACCESSCM2         | UM10.6                              | 1.875 × 1.25        | Gregory and Rowntree (1990) | Gregory and Rowntree (1990) | Wilson et al. (2008)        | Wilson et al. (2008)        |
 | UM   | ACCESSESM1-5      | UM7.3 GA1                          | 1.875 × 1.25        | Gregory and Rowntree (1990) | Gregory and Rowntree (1990) | Wilson et al. (2008)        | Wilson et al. (2008)        |
-| UM     | KACE-1–0-G       | UM                                 | 1.875 × 1.25        | Gregory and Rowntree (1990) | Gregory and Rowntree (1990) | Wilson et al. (2008)        | Wilson et al. (2008)        |
+| UM     | KACE-1–0-G       | UM  GA7.1                               | 1.875 × 1.25        | Gregory and Rowntree (1990) | Gregory and Rowntree (1990) | Wilson et al. (2008)        | Wilson et al. (2008)        |
 | BCC      | BCC-CSM2-MR      | BCCAGCM3-MR                        | 1.125 × 1.125       | Modified Wu (2012)         | Hack (1994)                 | Rasch and Kristjánsson (1998) | Wu et al. (2019)           |
 | BCC | BCC-ESM1         | BCCAGCM3chem                      | 2.8 × 2.8           | Modified Wu (2012)         | Hack (1994)                 | Rasch and Kristjánsson (1998) | Wu et al. (2019)           |
 | EC       | EC-Earth3        | ECMWF-IFS 36r4                    | 0.7 × 0.7           | Bechtold et al. (2014)     | Bechtold et al. (2014)       | Tiedtke (1993)              | Tiedtke (1993)              |

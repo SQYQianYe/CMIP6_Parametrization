@@ -40,3 +40,47 @@
 | GAMIL    | FGOALS-g3         | GAMIL3                             | 2 × 2               | Wu et al. (2007)           | Wu et al. (2007)            | Morrison and Gettelman (2008) | Guo and Zhou (2014)        |
 | GAMIL   | FGOALS-f3-L       | FAMIL2.2                           | 1 × 1               | Nordeng (1994)Tiedtke (1989)            | Nordeng (1994)Tiedtke (1989)             | Lin et al.(1983)              | Xu&Randall (1996)              |
 | IPSL     | IPSL-CM6A-LR      | LMDZ6                              | 2.5 × 1.259         | Emanuel (1991) Rio et al. (2009)            | Rio and Hourdin (2008)          | Madeleine et al. (2020)      | Madeleine et al. (2020)      |
+
+## References
+
+- Bechtold et al. (2014): Representing equilibrium and nonequilibrium convection in large-scale models.
+- Gregory and Rowntree (1990): A mass flux convection scheme with representation of cloud ensemble characteristics and stability-dependent closure.
+- Wilson et al. (2008): Design and performance of a new cloud microphysics parameterization developed for the ECHAM general circulation model.
+- Hack (1994): Parameterization of moist convection in the National Center for Atmospheric Research Community Climate Model (CCM2).
+- Rasch and Kristjánsson (1998): A comparison of the CCM3 model climate using diagnosed and predicted condensate parameterizations.
+- Wu et al. (2019): The Beijing climate center climate system model (BCC-CSM): the main progress from CMIP5 to CMIP6.
+- Döscher et al. (2022): The EC-Earth3 earth system model for the coupled model intercomparison project 6.
+- Nordeng (1994): Extended versions of the convective parameterization scheme at ECMWF and their impact on the mean and transient activity of the model in the tropics.
+- Tiedtke (1989): A comprehensive mass flux scheme for cumulus parameterization in large-scale models.
+- Tiedtke (1993): Representation of clouds in large-scale models.
+- Rong et al. (2019): CAMS-CSM model and its participation in CMIP6.
+- Lohmann and Roeckner (1996): Design and performance of a new cloud microphysics parameterization developed for the ECHAM general circulation model.
+- Tompkins (2002): A prognostic parameterization for the subgrid-scale variability of water vapor and clouds in large-scale models and its use to diagnose cloud cover.
+- Bethke et al. (2021): NorCPM1 and its contribution to CMIP6 DCPP.
+- Zhang and McFarlane (1995): Sensitivity of climate simulations to the parameterization of cumulus convection in the Canadian climate center general-circulation model.
+- Park and Bretherton (2009): A new two-moment bulk stratiform cloud microphysics scheme in the community atmosphere model, version 3 (CAM3).
+- Rasch and Kristjánsson (1998): A comparison of the CCM3 model climate using diagnosed and predicted condensate parameterizations.
+- Morrison and Gettelman (2008): A new two-moment bulk stratiform cloud microphysics scheme in the community atmosphere model, version 3 (CAM3).
+- Cherchi et al. (2019): Global mean climate and main patterns of variability in the CMCC-CM2 coupled model.
+- Xie et al. (2018): Understanding cloud and convective characteristics in version 1 of the E3SM atmosphere model.
+- Golaz et al. (2022): The DOE E3SM model version 2: overview of the physical model and initial model evaluation.
+- Danabasoglu et al. (2020): The community earth system model version 2 (CESM2).
+- Volodin et al. (2021): Simulation of the present-day climate with the climate model INMCM5.
+- Betts (1986): A new convective adjustment scheme. part i: observational and theoretical basis.
+- Galin (1998): Parametrization of radiative processes in the DNM atmospheric model.
+- Zhao et al. (2018): Structure and performance of GFDL’s CM4.0 climate model.
+- Held et al. (2019): Structure and performance of GFDL’s CM4.0 climate model.
+- Pak et al. (2021): Korea institute of ocean science and technology earth system model and its simulation characteristics.
+- Wang et al. (2021): Performance of the Taiwan earth system model in simulating climate variability compared with observations and CMIP6 model simulations.
+- Tatebe et al. (2019): Description and basic evaluation of simulated mean state, internal variability, and climate sensitivity in MIROC6.
+- Chikira and Sugiyama (2010): A cumulus parameterization with state-dependent entrainment rate.
+- Watanabe et al. (2009): A PDF-based hybrid prognostic cloud scheme for general circulation models.
+- Wilson and Ballard (1999): A microphysically based precipitation scheme for the UK meteorological office unified model.
+- Kawai et al. (2017): Interpretation of factors controlling low cloud cover and low cloud feedback using a unified predictive index.
+- Yukimoto et al. (2019): The meteorological research institute earth system model version 2.0, MRI-ESM2.0.
+- Swart et al. (2019): The Canadian Earth system model version 5 (CanESM5.0.3).
+- CAS-ESM2-0 Zhang et al. (2020): Description and climate simulation performance of CAS-ESM version 2.
+- Li et al. (2020): The flexible global ocean-atmosphere-land system model grid-point version 3 (FGOALS-g3).
+- He et al. (2019): CAS FGOALS-f3-L model datasets for CMIP6 historical atmospheric model intercomparison project simulation.
+- Lin et al. (1983): Bulk parameterization of the snow field in a cloud model.
+- Xu and Randall (1996): A semiempirical cloudiness parameterization for use in climate models.

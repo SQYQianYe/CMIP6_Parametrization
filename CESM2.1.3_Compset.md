@@ -223,3 +223,110 @@
 |G_DWAV		                    |2000_DATM%NYF_SLND_CICE_POP2_DROF%NYF_SGLC_DWAV%CLIMO
 |GIAF_DWAV		                    |2000_DATM%IAF_SLND_CICE_POP2_DROF%IAF_SGLC_DWAV%CLIMO
 
+
+# Component Generic Type
+
+## Component Generic Name
+
+### Component Name
+- Component Type
+- Description
+
+## atmosphere
+### atm
+- cam
+  - active
+  - The Community Atmosphere Model (CAM) is a global atmospheric general circulation model developed from the NCAR CCM3.
+- datm
+  - data
+  - The data atmosphere component is a pure data component that reads in atmospheric forcing data.
+- xatm
+  - dead
+  - Used only for testing the driver/coupler.
+- satm
+  - stub
+  - Used only to satisfy the interface requirements.
+
+## land
+### lnd
+- clm
+  - active
+  - The Community Land Model (CLM) is the result of a collaborative project between scientists in the Terrestrial Sciences Section of the Climate and Global Dynamics Division (CGD) at NCAR and the CESM Land Model Working Group.
+- dlnd
+  - data
+  - The data land component is a purely data-land component.
+- xlnd
+  - dead
+  - Used only for testing the driver/coupler.
+- slnd
+  - stub
+  - Used only to satisfy the interface requirements.
+
+## river
+### rof
+- rtm
+  - active
+  - The river transport model (RTM) was previously part of CLM.
+- mosart
+  - active
+  - MOdel for Scale Adaptive River Transport (MOSART), a new large-scale river routing model.
+- drof
+  - data
+  - The data runoff model was previously part of the data land model.
+- xrof
+  - dead
+  - Used only for testing the driver/coupler.
+- srof
+  - stub
+  - Used only to satisfy the interface requirements.
+
+## ocean
+### ocn
+- pop
+  - active
+  - The ocean model is an extension of the Parallel Ocean Program (POP) Version 2.
+- mom6
+  - active
+  - Based on the Modular Ocean Model version 6.
+- docn
+  - data
+  - The data ocean component has two distinct modes of operation.
+- xo cn
+  - dead
+
+## sea-ice
+### ice
+- cice
+  - active
+  - The sea-ice component (CICE) is an extension of the Los Alamos National Laboratory (LANL) sea-ice model.
+- dice
+  - data
+  - The data ice component is a partially prognostic model.
+- xice
+  - dead
+- sice
+  - stub
+
+## land-ice
+### glc
+- cism
+  - active
+  - The CISM component is an extension of the Glimmer ice sheet model.
+- sglc
+  - stub
+
+## ocean-wave
+### wav
+- ww3
+  - The ww3 component adds prognostic ocean waves to the system.
+- xwav
+  - dead
+- swav
+  - stub
+
+## coupler
+### cpl
+- cpl
+  - active
+  - The CESM coupler was built primarily through a collaboration of the NCAR CESM Software Engineering Group and the Argonne National Laboratory (ANL).
+

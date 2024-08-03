@@ -1,4 +1,4 @@
-| alias               | long name                                                                 |
+| Alias               | Long name                                                                 |
 |------------------------|--------------------------------------------------------------------------|
 | B1850                  | 1850_CAM60_CLM50%BGC-CROP_CICE_POP2%ECO%ABIO-DIC_MOSART_CISM2%NOEVOLVE_WW3_BGC%BDRD |
 | B1850cmip6             | 1850_CAM60_CLM50%BGC-CROP-CMIP6DECK_CICE%CMIP6_POP2%ECO%ABIO-DIC_MOSART_CISM2%NOEVOLVE_WW3_BGC%BDRD |

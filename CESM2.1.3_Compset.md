@@ -224,109 +224,87 @@
 |GIAF_DWAV		                    |2000_DATM%IAF_SLND_CICE_POP2_DROF%IAF_SGLC_DWAV%CLIMO
 
 
+
+# Designation
+
+| Designation | Active Components | Data Components | Notes |
+|-------------|-------------------|------------------|-------|
+| A           | –                 | various          | All data components; used for software testing |
+| B           | atm, lnd, ice, ocn | –               | Fully active components |
+| C           | ocn               | atm, ice, rof    | –     |
+| D           | ice               | atm, ocn, rof    | –     |
+| S           | –                 | –               | Slab ocean model (SOM) |
+| E           | atm, lnd, ice     | ocn             | Slab ocean model (SOM) |
+| F           | atm, lnd         | ice, ocn        | Sea ice in prescribed mode; some F compsets use fewer surface components |
+| G           | ice, ocn          | atm, rof        | –     |
+| I           | lnd               | atm             | –     |
+| J           | lnd, ice, ocn     | atm             | Can be used to spin up the surface components |
+| P           | atm               | –               | CAM PORT compsets |
+| Q           | atm               | ocn             | Aquaplanet compsets |
+| S           | –                 | –               | No components present; used for software testing |
+| T           | glc               | lnd             | –     |
+| X           | –                 | –               | Coupler-test components; used for software testing |
+
+
 # Component Generic Type
 
 ## Component Generic Name
 
-### Component Name
-- Component Type
-- Description
+| Component Name | Component Type | Description |
+|-----------------|-----------------|-------------|
+| cam             | active          | The Community Atmosphere Model (CAM) is a global atmospheric general circulation model developed from the NCAR CCM3. |
+| datm            | data            | The data atmosphere component is a pure data component that reads in atmospheric forcing data. |
+| xatm            | dead            | Used only for testing the driver/coupler. |
+| satm            | stub            | Used only to satisfy the interface requirements. |
 
-## atmosphere
-### atm
-- cam
-  - active
-  - The Community Atmosphere Model (CAM) is a global atmospheric general circulation model developed from the NCAR CCM3.
-- datm
-  - data
-  - The data atmosphere component is a pure data component that reads in atmospheric forcing data.
-- xatm
-  - dead
-  - Used only for testing the driver/coupler.
-- satm
-  - stub
-  - Used only to satisfy the interface requirements.
+## Land
+| Component Name | Component Type | Description |
+|-----------------|-----------------|-------------|
+| clm             | active          | The Community Land Model (CLM) is the result of a collaborative project between scientists in the Terrestrial Sciences Section of the Climate and Global Dynamics Division (CGD) at NCAR and the CESM Land Model Working Group. Other principal working groups that also contribute to the CLM are Biogeochemistry, Paleoclimate, and Climate Change and Assessment. |
+| dlnd            | data            | The data land component is a purely data-land component (reading in coupler history data for atm/land fluxes and land albedos produced by a previous run, or snow surface mass balance fields) or both. |
+| xlnd            | dead            | Used only for testing the driver/coupler. |
+| slnd            | stub            | Used only to satisfy the interface requirements. |
 
-## land
-### lnd
-- clm
-  - active
-  - The Community Land Model (CLM) is the result of a collaborative project between scientists in the Terrestrial Sciences Section of the Climate and Global Dynamics Division (CGD) at NCAR and the CESM Land Model Working Group.
-- dlnd
-  - data
-  - The data land component is a purely data-land component.
-- xlnd
-  - dead
-  - Used only for testing the driver/coupler.
-- slnd
-  - stub
-  - Used only to satisfy the interface requirements.
+## River
+| Component Name | Component Type | Description |
+|-----------------|-----------------|-------------|
+| rtm             | active          | The river transport model (RTM) was previously part of CLM and was developed to route total runoff from the land surface model to either the active ocean or marginal seas which enables the hydrologic cycle to be closed. This is needed to model ocean convection and circulation, which is affected by freshwater input. |
+| mosart          | active          | The Model for Scale Adaptive River Transport (MOSART), a new large-scale river routing model, improves the magnitude and timing of river flow simulations. |
+| drof            | data            | The data runoff model was previously part of the data land model and functions as a purely data-runoff model (reading in runoff data). |
+| xrof            | dead            | Used only for testing the driver/coupler. |
+| srof            | stub            | Used only to satisfy the interface requirements. |
 
-## river
-### rof
-- rtm
-  - active
-  - The river transport model (RTM) was previously part of CLM.
-- mosart
-  - active
-  - MOdel for Scale Adaptive River Transport (MOSART), a new large-scale river routing model.
-- drof
-  - data
-  - The data runoff model was previously part of the data land model.
-- xrof
-  - dead
-  - Used only for testing the driver/coupler.
-- srof
-  - stub
-  - Used only to satisfy the interface requirements.
+## Ocean
+| Component Name | Component Type | Description |
+|-----------------|-----------------|-------------|
+| pop             | active          | The ocean model is an extension of the Parallel Ocean Program (POP) Version 2 from Los Alamos National Laboratory (LANL). |
+| mom6            | active          | Based on the Modular Ocean Model version 6; an early functional release is available starting in CESM2.2. Note that MOM6 is not obtained by default; for instructions on obtaining it, see [GitHub](https://github.com/ESCOMP/MOM_interface/wiki/Detailed-Instructions). |
+| docn            | data           | The data ocean component has two distinct modes of operation. It can run as a pure data model, reading ocean SSTs (normally climatological) from input datasets, interpolating in space and time, and then passing these to the coupler. Alternatively, docn can compute updated SSTs based on a slab ocean model where bottom ocean heat flux convergence and boundary layer depths are read in and used with the atmosphere/ocean and ice/ocean fluxes obtained from the coupler. |
+| xo cn           | dead           |               |
+| socn           | stub           |               |
 
-## ocean
-### ocn
-- pop
-  - active
-  - The ocean model is an extension of the Parallel Ocean Program (POP) Version 2.
-- mom6
-  - active
-  - Based on the Modular Ocean Model version 6.
-- docn
-  - data
-  - The data ocean component has two distinct modes of operation.
-- xo cn
-  - dead
+## Sea-Ice
+| Component Name | Component Type | Description |
+|-----------------|-----------------|-------------|
+| cice            | active          | The sea-ice component (CICE) is an extension of the Los Alamos National Laboratory (LANL) sea-ice model and was developed through collaboration within the CESM Polar Climate Working Group (PCWG). In CESM, CICE can run as a fully prognostic component or in prescribed mode where ice coverage (normally climatological) is read in. |
+| dice           | data            | The data ice component is a partially prognostic model. The model reads in ice coverage and receives atmospheric forcing from the coupler, and then it calculates the ice/atmosphere and ice/ocean fluxes. The data ice component acts very similarly to CICE running in prescribed mode. |
+| xice           | dead            | Used only for testing the driver/coupler. |
+| sice           | stub            | Used only to satisfy the interface requirements. |
 
-## sea-ice
-### ice
-- cice
-  - active
-  - The sea-ice component (CICE) is an extension of the Los Alamos National Laboratory (LANL) sea-ice model.
-- dice
-  - data
-  - The data ice component is a partially prognostic model.
-- xice
-  - dead
-- sice
-  - stub
+## Land-Ice
+| Component Name | Component Type | Description |
+|-----------------|-----------------|-------------|
+| cism            | active          | The CISM component is an extension of the Glimmer ice sheet model. |
+| sglc           | stub            | Used only to satisfy the interface requirements. |
 
-## land-ice
-### glc
-- cism
-  - active
-  - The CISM component is an extension of the Glimmer ice sheet model.
-- sglc
-  - stub
+## Ocean-Wave
+| Component Name | Component Type | Description |
+|-----------------|-----------------|-------------|
+| wav             | ww3             | The ww3 component adds prognostic ocean waves to the system. |
+| xwav           | dead            | Used only for testing the driver/coupler. |
+| swav           | stub            | Used only to satisfy the interface requirements. |
 
-## ocean-wave
-### wav
-- ww3
-  - The ww3 component adds prognostic ocean waves to the system.
-- xwav
-  - dead
-- swav
-  - stub
-
-## coupler
-### cpl
-- cpl
-  - active
-  - The CESM coupler was built primarily through a collaboration of the NCAR CESM Software Engineering Group and the Argonne National Laboratory (ANL).
-
+## Coupler
+| Component Name | Component Type | Description |
+|-----------------|-----------------|-------------|
+| cpl             | active          | The CESM coupler was built primarily through a collaboration of the NCAR CESM Software Engineering Group and the Argonne National Laboratory (ANL). The MCT coupling library provides much of the infrastructure. |

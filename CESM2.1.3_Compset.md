@@ -323,7 +323,7 @@
 | Fofonoff模型 | $$\nabla^2\psi-c_0\psi=c_1-f$$ |
 | Bretherton-Haidvogel模型 | $$\nabla^2\psi-\lambda D\psi=-\frac{f_0}{D}\eta_B$$ | 
 | 准地转Omega方程 | $$\frac{\partial}{\partial p}\left(f^2\frac{\partial \omega}{\partial p}\right)+\nabla\cdot\left(S\nabla\omega\right)=F$$ | 
-| 3D海洋流 | $$\frac{\partial}{\partial p}\left(c_3\frac{\partial \phi}{\partial p}\right)+\nabla\cdot\left(c_1\nabla\phi-c_2\hat\nabla\phi\right)=F$$ |
+| 3D海洋环流 | $$\frac{\partial}{\partial p}\left(c_3\frac{\partial \phi}{\partial p}\right)+\nabla\cdot\left(c_1\nabla\phi-c_2\hat\nabla\phi\right)=F$$ |
 
 |  Names | A PI calls  |
 | -----: | :---------- |
@@ -338,6 +338,6 @@
 | Fofonoff模型 |  `sf = invert_Fofonoff(F, dims=['Y','X'], mParams={c0, c1, f})` |
 | Bretherton-Haidvogel模型 |  `sf = invert_BrethertonHaidvogel(etaB, dims=['Y','X'], mParams={lambda, f, D})` |
 | 准地转Omega方程 |  `w = invert_Omega(F, dims=['Z','Y','X'], mParams={f, S})` |
-| 3D海洋流 |  `w = invert_3DFlow(F, dims=['Z','Y','X'], mParams={f, N2, epsilon})` |
+| 3D海洋环流 |  `w = invert_3DFlow(F, dims=['Z','Y','X'], mParams={f, N2, epsilon})` |
 
 

@@ -325,7 +325,7 @@
 | 准地转Omega方程 | $$\frac{\partial}{\partial p}\left(f^2\frac{\partial \omega}{\partial p}\right)+\nabla\cdot\left(S\nabla\omega\right)=F$$ | 
 | 3D海洋环流 | $$\frac{\partial}{\partial p}\left(c_3\frac{\partial \phi}{\partial p}\right)+\nabla\cdot\left(c_1\nabla\phi-c_2\hat\nabla\phi\right)=F$$ |
 
-|  Names | A PI calls  |
+|  方程  | API接口  |
 | -----: | :---------- |
 | 水平流函数 |  `sf = invert_Poisson(vork, dims=['Y','X'], mParams=None)` |
 | 地转平衡方程 | `sf = invert_geostrophic(LapPhi, dims=['Y','X'], mParams={f})` |

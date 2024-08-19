@@ -324,3 +324,20 @@
 | Bretherton-Haidvogel模型 | $$\nabla^2\psi-\lambda D\psi=-\frac{f_0}{D}\eta_B$$ | 
 | 准地转Omega方程 | $$\frac{\partial}{\partial p}\left(f^2\frac{\partial \omega}{\partial p}\right)+\nabla\cdot\left(S\nabla\omega\right)=F$$ | 
 | 3D海洋流 | $$\frac{\partial}{\partial p}\left(c_3\frac{\partial \phi}{\partial p}\right)+\nabla\cdot\left(c_1\nabla\phi-c_2\hat\nabla\phi\right)=F$$ |
+
+|  Names |  Equations  | A PI calls  |
+| -----: | :---------: | :---------- |
+| 水平流函数 | $$\nabla^2\psi=\frac{\partial^2 \psi}{\partial y^2}+\frac{\partial^2 \psi}{\partial x^2}=\zeta_k$$ | `sf = invert_Poisson(vork, dims=['Y','X'], mParams=None)` |
+| 地转平衡方程 | $$\frac{\partial}{\partial y}\left(f\frac{\partial \psi}{\partial y}\right)+\frac{\partial}{\partial x}\left(f\frac{\partial \psi}{\partial x}\right)=\nabla^2 \Phi$$ | `sf = invert_geostrophic(LapPhi, dims=['Y','X'], mParams={f})` |
+| Eliassen模型 | $$\frac{\partial}{\partial p}\left(A\frac{\partial \psi}{\partial p}+B\frac{\partial \psi}{\partial y}\right)+\frac{\partial}{\partial y}\left(B\frac{\partial \psi}{\partial p}+C\frac{\partial \psi}{\partial y}\right)=F$$ | `sf = invert_Eliassen(F, dims=['Z','Y'], mParams={Angm, Thm})` |
+| 参考状态下的浅水方程| $$\frac{\partial }{\partial y}\left(A\frac{\partial \Delta M}{\partial y}\right)+B\Delta M=F$$ | `delM = invert_RefStateSWM(PV, dims=['lat'], mParams={M0, C0})` |
+| 平衡流的位涡反演方程| $$\frac{\partial}{\partial \theta}\left(\frac{2\Lambda_0}{r^2}\frac{\partial\Lambda}{\partial \theta}\right)+\frac{\partial}{\partial r}\left(\frac{\Gamma g}{Qr}\frac{\partial\Lambda}{\partial r}\right)=0$$ | `angM = invert_RefState(PV, dims=['Z','Y'], mParams={ang0, Gamma})` |
+| 准地转流的位涡反演方程 | $$\frac{\partial}{\partial p}\left(\frac{f^2}{N^2}\frac{\partial \psi}{\partial p}\right)+\frac{\partial^2 \psi}{\partial y^2}=q$$ | `sf = invert_PV2D(PV, dims=['Z', 'Y'], mParams={f, N2})` |
+| Gill-Matsuno模型 | $$A\frac{\partial^2 \phi}{\partial y^2}+B\frac{\partial^2 \phi}{\partial x^2}+C\frac{\partial \phi}{\partial y}+D\frac{\partial \phi}{\partial x}+E\phi=Q$$ | `h = invert_GillMatsuno(Q, dims=['Y','X'], mParams={f, epsilon, Phi})` |
+| Stommel-Munk模型 | $$A\nabla^4\psi-\frac{R}{D}\nabla^2\psi-\beta\frac{\partial \psi}{\partial x}=-\frac{\mathbf k\cdot\nabla\times\mathbf{\tau}}{\rho_0 D}$$ | `sf = invert_StommelMunk(curl, dims=['Y','X'], mParams={A, R, D, beta, rho})` |
+| Fofonoff模型 | $$\nabla^2\psi-c_0\psi=c_1-f$$ | `sf = invert_Fofonoff(F, dims=['Y','X'], mParams={c0, c1, f})` |
+| Bretherton-Haidvogel模型 | $$\nabla^2\psi-\lambda D\psi=-\frac{f_0}{D}\eta_B$$ | `sf = invert_BrethertonHaidvogel(etaB, dims=['Y','X'], mParams={lambda, f, D})` |
+| 准地转Omega方程 | $$\frac{\partial}{\partial p}\left(f^2\frac{\partial \omega}{\partial p}\right)+\nabla\cdot\left(S\nabla\omega\right)=F$$ | `w = invert_Omega(F, dims=['Z','Y','X'], mParams={f, S})` |
+| 3D海洋流 | $$\frac{\partial}{\partial p}\left(c_3\frac{\partial \phi}{\partial p}\right)+\nabla\cdot\left(c_1\nabla\phi-c_2\hat\nabla\phi\right)=F$$ | `w = invert_3DFlow(F, dims=['Z','Y','X'], mParams={f, N2, epsilon})` |
+
+

@@ -308,3 +308,19 @@
 | Component Name | Component Type | Description |
 |-----------------|-----------------|-------------|
 | cpl             | active          | The CESM coupler was built primarily through a collaboration of the NCAR CESM Software Engineering Group and the Argonne National Laboratory (ANL). The MCT coupling library provides much of the infrastructure. |
+
+
+|  方程 |  数学形式  |
+| ----- | --------- | 
+| 水平流函数	 | $$\nabla^2\psi=\frac{\partial^2 \psi}{\partial y^2}+\frac{\partial^2 \psi}{\partial x^2}=\zeta_k$$ |
+| 地转平衡方程 | $$\frac{\partial}{\partial y}\left(f\frac{\partial \psi}{\partial y}\right)+\frac{\partial}{\partial x}\left(f\frac{\partial \psi}{\partial x}\right)=\nabla^2 \Phi$$ | 
+| Eliassen模型 | $$\frac{\partial}{\partial p}\left(A\frac{\partial \psi}{\partial p}+B\frac{\partial \psi}{\partial y}\right)+\frac{\partial}{\partial y}\left(B\frac{\partial \psi}{\partial p}+C\frac{\partial \psi}{\partial y}\right)=F$$ | 
+| 参考状态下的浅水方程| $$\frac{\partial }{\partial y}\left(A\frac{\partial \Delta M}{\partial y}\right)+B\Delta M=F$$ |
+| 平衡流的位涡反演方程| $$\frac{\partial}{\partial \theta}\left(\frac{2\Lambda_0}{r^2}\frac{\partial\Lambda}{\partial \theta}\right)+\frac{\partial}{\partial r}\left(\frac{\Gamma g}{Qr}\frac{\partial\Lambda}{\partial r}\right)=0$$ | 
+| 准地转流的位涡反演方程 | $$\frac{\partial}{\partial p}\left(\frac{f^2}{N^2}\frac{\partial \psi}{\partial p}\right)+\frac{\partial^2 \psi}{\partial y^2}=q$$ | 
+| Gill-Matsuno模型 | $$A\frac{\partial^2 \phi}{\partial y^2}+B\frac{\partial^2 \phi}{\partial x^2}+C\frac{\partial \phi}{\partial y}+D\frac{\partial \phi}{\partial x}+E\phi=Q$$ |
+| Stommel-Munk模型 | $$A\nabla^4\psi-\frac{R}{D}\nabla^2\psi-\beta\frac{\partial \psi}{\partial x}=-\frac{\mathbf k\cdot\nabla\times\mathbf{\tau}}{\rho_0 D}$$ | 
+| Fofonoff模型 | $$\nabla^2\psi-c_0\psi=c_1-f$$ |
+| Bretherton-Haidvogel模型 | $$\nabla^2\psi-\lambda D\psi=-\frac{f_0}{D}\eta_B$$ | 
+| 准地转Omega方程 | $$\frac{\partial}{\partial p}\left(f^2\frac{\partial \omega}{\partial p}\right)+\nabla\cdot\left(S\nabla\omega\right)=F$$ | 
+| 3D海洋流 | $$\frac{\partial}{\partial p}\left(c_3\frac{\partial \phi}{\partial p}\right)+\nabla\cdot\left(c_1\nabla\phi-c_2\hat\nabla\phi\right)=F$$ |
